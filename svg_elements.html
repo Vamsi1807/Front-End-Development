@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SVG elements</title>
+</head>
+<body>
+    <svg height="500" width="500">
+        <circle cx="250" cy="250" r="100" onclick="cir()" id="cir" ></circle>
+    </svg>
+    <svg height="500" width="500">
+        <ellipse cx="250" cy="250" rx="250" ry="100" id="ell" onclick="ell()" fill="gold"></ellipse>
+    </svg>
+    <svg height="500" width="500">
+        <polygon points="250,10 350,220 150,220" id="poly" onclick="poly()" fill="tomato"></polygon>
+    </svg>
+    <svg height="500" width="500">
+        <line x1="10" y1="100" x2="200" y2="100" stroke="red" id="line" onclick="line"></line>
+    </svg>
+    <script>
+        function cir(){
+            alert("Radius of circle is " + document.getElementById("cir").getAttribute("r")+" pixels.");
+        }
+        function ell(){
+            alert("Color of ellipse is " + document.getElementById("ell").getAttribute("fill"));
+        }
+        function poly(){
+            alert("Color of polygon is " + document.getElementById("poly").getAttribute("fill"));
+        }
+
+    </script>
+</body>
+</html>

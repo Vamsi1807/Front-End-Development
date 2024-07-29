@@ -1,0 +1,44 @@
+
+<html>
+<head>
+    <title>SVG gradients</title>
+</head>
+<body>
+    <svg height="500" width="500">
+        <defs>
+            <radialGradient x1="0%" y1="0%" x2="100%" y2="0%" id="rg">
+                <stop offset="0" style="stop-color:rgb(90, 120, 131);stop-opacity:1"/>
+                <stop offset="100" style="stop-color:rgb(225, 102, 102);stop-opacity:1"/>
+            </radialGradient>
+        </defs>
+        <circle cx="250" cy="250" r="100" onclick="cir()" id="cir" fill="url(#rg)"></circle>
+    </svg>
+    <svg height="500" width="500">
+        <defs>
+            <linearGradient x1="0%" y1="0%" x2="100%" y2="0%" id="lg">
+                <stop offset="0" style="stop-color:rgb(108, 203, 234);stop-opacity:1"/>
+                <stop offset="100" style="stop-color:rgb(225, 102, 102);stop-opacity:1"/>
+            </linearGradient>
+        </defs>
+        <ellipse cx="250" cy="250" rx="250" ry="100" id="ell" onclick="ell()" fill="url(#lg)"></ellipse>
+    </svg>
+    <svg height="500" width="500">
+        <polygon points="250,10 350,220 150,220" id="poly" onclick="poly()" fill="tomato"></polygon>
+    </svg>
+    <svg height="500" width="500">
+        <line x1="10" y1="100" x2="200" y2="100" stroke="red" id="line" onclick="line"></line>
+    </svg>
+    <script>
+        function cir(){
+            alert("Radius of circle is " + document.getElementById("cir").getAttribute("r")+" pixels.");
+        }
+        function ell(){
+            alert("Color of ellipse is " + document.getElementById("ell").getAttribute("fill"));
+        }
+        function poly(){
+            alert("Color of polygon is " + document.getElementById("poly").getAttribute("fill"));
+        }
+
+    </script>
+</body>
+</html>
